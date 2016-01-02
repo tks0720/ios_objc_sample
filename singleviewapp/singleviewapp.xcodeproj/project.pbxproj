@@ -15,6 +15,7 @@
 		AF23A9711C37D79900DDE144 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF23A96F1C37D79900DDE144 /* LaunchScreen.storyboard */; };
 		AF23A97C1C37D79900DDE144 /* singleviewappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF23A97B1C37D79900DDE144 /* singleviewappTests.m */; };
 		AF23A9871C37D79900DDE144 /* singleviewappUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF23A9861C37D79900DDE144 /* singleviewappUITests.m */; };
+		AF23A9961C37D7C700DDE144 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF23A9951C37D7C700DDE144 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		AF23A9821C37D79900DDE144 /* singleviewappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = singleviewappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF23A9861C37D79900DDE144 /* singleviewappUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = singleviewappUITests.m; sourceTree = "<group>"; };
 		AF23A9881C37D79900DDE144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF23A9941C37D7C600DDE144 /* singleviewapp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "singleviewapp-Bridging-Header.h"; sourceTree = "<group>"; };
+		AF23A9951C37D7C700DDE144 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +84,12 @@
 		AF23A9551C37D79900DDE144 = {
 			isa = PBXGroup;
 			children = (
+				AF23A9951C37D7C700DDE144 /* File.swift */,
 				AF23A9601C37D79900DDE144 /* singleviewapp */,
 				AF23A97A1C37D79900DDE144 /* singleviewappTests */,
 				AF23A9851C37D79900DDE144 /* singleviewappUITests */,
 				AF23A95F1C37D79900DDE144 /* Products */,
+				AF23A9941C37D7C600DDE144 /* singleviewapp-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -271,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF23A9691C37D79900DDE144 /* ViewController.m in Sources */,
+				AF23A9961C37D7C700DDE144 /* File.swift in Sources */,
 				AF23A9661C37D79900DDE144 /* AppDelegate.m in Sources */,
 				AF23A9631C37D79900DDE144 /* main.m in Sources */,
 			);
@@ -413,10 +419,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = singleviewapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.htks27.app.singleviewapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "singleviewapp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -424,10 +433,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = singleviewapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.htks27.app.singleviewapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "singleviewapp-Bridging-Header.h";
 			};
 			name = Release;
 		};
